@@ -27,8 +27,8 @@ print( f"Hello {first_name}" ) # -> Hello özge
 ```Python
 Age= 25
 Gpa=3.2
-print(f"You are {Age} years old") #  You are 25 years old
-print(f"gpa: {Gpa}") # gpa: 3.2
+print(f"You are {Age} years old") #  You are 25 years old
+print(f"gpa: {Gpa}") # gpa: 3.2
 ```
 **Boolean**
 
@@ -55,11 +55,11 @@ you can get the type of a variable or value with the type() function.
 name="özge"
 age=20
 gpa=3.2
-print(type(name)) #  <class ‘str’>
+print(type(name)) #  <class ‘str’>
 gpa=int(gpa)   
-print(gpa) #  3
+print(gpa) #  3
 age=float(age)
-print(age) #  20.0
+print(age) #  20.0
 age=str(age)
 print(type(age)) #  <class ‘str’> (artık variable türü değişti)
 # age += 1 -> hata verir string e integer ekleyemez
@@ -174,8 +174,193 @@ String için de == sorgusu kullanılabiliyor.Java dan daha farklı, nesne tabanl
 
 *NOT:  Notlar çalışma sırasında word üzerinden alınıp,daha sonrasında mevcut dökümana eklenmektedir.*
 
+### CONDITIONAL EXPRESSIONS
+A one line shortcort for the if else statement, used to print or assign one of the two values based on a condition
+Syntax is -> X if condition else Y
+
+```Python
+num=5
+print(“Positive” if num>0 else “Negative”)
+
+result=”EVEN” if num%2==0 else “ODD”
+print(result)
+
+a=6 
+b=7
+max_num=a if a>b else b
+print(max_num)
+
+```
+Output and explanation:
+-Positive (5 is greater than 0 so it prints "5")
+-ODD ( 5 is an odd number)
+-7 (a isnt greater than b so it prints b)
+
+### STRING METHODS
+
+`name= “aziz sancar”`
+`len(name)`-> 11'  (string uzunluğunu verir boşluğu da alır)
+`name.find(“z”)` -> 1 ( string deki ilk z nin indexini döndürür,indexler 0 dan başlar)
+`name.rfind(“a”)` -> 9 (last accurance of a)
+for both methods(find() and rfind()), if phyton isnt able to find the given character, it will return -1
+
+`name= name.capitalize()` ->Aziz sancar
+`name=name.upper()` -> AZİZ SANCAR
+`name=name.lower()` -> aziz sancar
+
+`name.isdigit()` -> result is a boolean if the string consists of only digits(numbers) it turns True, otherwise returns false
+
+`name.isalpha()` if String consists of only alphabetical characters, it will return True.In this stiuation it will return False since space “   “ isnt an alphabetical character
+name.count(a) -> 3 (returns the number of the said character)
+name.replace(“a” ,  “o” ) -> oziz soncor
+name.replace(“a” , “”) ->  ziz sncr
+
+### STRING INDEXING
+
+Indexing is Accessing elements of a sequence using []
+[] is indexing operator
+[start : end : step ]
+```Python
+credit_number=1234-5678-9012-3456
+print( credit_number[0] ) # 1
+print( credit_number[4] ) # -
+```
+If you have just one field listed without any columns ( : ) its assummed you are filling in the starting position.
+For first four digits:
+```Python
+Print ( credit_number[0:4] ) # 1234( ending index is not included, if you write 0:4 it takes indexes 0,1,2,3)
+Print(credit_number[:4] # 1234 , phyton asuumes the starting position will be the beginning of the string
+```
+
+```Python
+Print(credit_number[5:] # output: 5678-9012-3456
+#if you need everything from the starting index  down to the end of a string, you dont need to #specify the ending index, just leave a column : after the starting index.
+#You can also use negative indexes last char of the string is index -1
+#Using the step field we can count by twos, threes and so on
+Credit_number[: : 2] ->13_6891-46
+Credit_number[:: -1] if you set the step to -1 it will reverse the string
+```
 
 
+### FORMAT SPECIFIERS {value: flags}
+
+Format a value based on what flags are inserted
+.(number)f       ->  round to that many decimal places (fixed point)
+:(number)        ->  allocate that many spaces
+:03	             ->  allocate and zero pad that many spaces
+:<	              ->  left justify (sola dayalı)
+:>             	 ->  right justify (sağa dayalı metin)
+:^             	 ->  center align (ortaya hizalı)
+:+             	 ->  use a plus sign to indicate positive value
+:=             	 ->  place sign to leftmost position
+:	               ->  insert a space before positive numbers
+:,             	 ->  comma seperator
+
+
+EXAMPLES AND EXPLANATIONS
+____________________________________________________________________________________________________
+
+```Python
+Price1= 3.14159
+Price2 = -987,65
+Price3= 12.34
+Print(f”Price 1 is {price1:.2f}”)
+Print(f”Price 2 is {price2:.3f}”)
+Print(f”Price 3 is {price1:.2f}”)
+```
+Output and explanation
+  * 3.14
+  * -987.650 
+  * Added zeros so its three decimals after the point
+  *12.34
+____________________________________________________________________________________________________
+
+```Python
+Price1= 3.14159
+Price2 = -987,6
+Price3= 12.34
+Print(f”Price 1 is {price1:10}”)
+Print(f”Price 2 is {price2:10}”)
+Print(f”Price 3 is {price1:10}”)
+
+```
+Output and explanation
+  * Each value now has a total of 10 spaces
+  *   3.14159
+  *    -987,6
+  *     12.34
+
+____________________________________________________________________________________________________
+
+```Python
+Price1= 3.14159
+Price2 = -987,65
+Price3= 12.34
+Print(f”Price 1 is {price1:010}”)
+Print(f”Price 2 is {price2:010}”)
+Print(f”Price 3 is {price1:010”)
+
+```
+Output and explanation
+  * The spaces are replaced with zeroes
+  * 0003.14159
+  * -0000987.65
+  * 0000012.34
+
+____________________________________________________________________________________________________
+
+```Python
+Price1= 3.14159
+Price2 = -987,65
+Price3= 12.34
+Print(f”Price 1 is {price1:<10}”)
+Print(f”Price 2 is {price2:>10}”)
+Print(f”Price 3 is {price1:^10}”)
+
+```
+Output and explanation
+  * 3.14159___  
+  * ___-987.65
+  * __12.34___
+ **!!**_ is used to indicate the spaces, normally it would look like:  12.34    sso it wouldnt be really obvious.
+
+
+___________________________________________________________________________________________________
+
+```Python
+
+Price1= 3.14159
+Price2 = -987,65
+Price3= 12.34
+Print(f”Price 1 is {price1:+}”)
+Print(f”Price 2 is {price2:+}”)
+Print(f”Price 3 is {price1:+}”)
+
+```
+Output and explanation
+  *  +3.14159
+  *  -987,65
+  *  +12.34
+
+____________________________________________________________________________________________________
+
+```Python
+Price1= 3000.14159
+Price2 = -9870,65
+Price3= 1200.34
+Print(f”Price 1 is {price1: , }”)
+Print(f”Price 2 is {price2: ,}”)
+Print(f”Price 3 is {price1: ,}”)
+
+```
+Output and explanation
+Each thousand brake is seperated with a comma
+  * price 1 is  3,000.14159
+  * price 2 is -9,870.65
+  * price 3 is  1,200.34
+
+You can use them combined too:  print({price1:+, .2f}) -> +3,000.14
+____________________________________________________________________________________________________
 
 
   
