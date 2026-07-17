@@ -2,8 +2,7 @@
 > 💡 **Bilgilendirme (WIP 🚧):** Bu doküman, *Bro Code* kanalının eğitim serisi referans alınarak oluşturulmuştur.
 >  Öğrenme hızını ve pratikliği kesmemek adına notlar şu aşamada İngilizce ve Türkçe terimlerin bir karışımı halindedir,ilerleyen süreçte içerik düzenlenecektir.
 
-
-__________________________________________________________________________________________________________________________________________________________________
+---
  
 ### **VARIABLES**
 
@@ -273,7 +272,7 @@ Output and explanation
   * -987.650 
   * Added zeros so its three decimals after the point
   *12.34
-____________________________________________________________________________________________________
+---
 
 ```Python
 Price1= 3.14159
@@ -290,7 +289,7 @@ Output and explanation
   *    -987,6
   *     12.34
 
-____________________________________________________________________________________________________
+---
 
 ```Python
 Price1= 3.14159
@@ -307,7 +306,7 @@ Output and explanation
   * -0000987.65
   * 0000012.34
 
-____________________________________________________________________________________________________
+---
 
 ```Python
 Price1= 3.14159
@@ -325,7 +324,7 @@ Output and explanation
  **!!**_ is used to indicate the spaces, normally it would look like:  12.34    sso it wouldnt be really obvious.
 
 
-___________________________________________________________________________________________________
+---
 
 ```Python
 
@@ -342,7 +341,7 @@ Output and explanation
   *  -987,65
   *  +12.34
 
-____________________________________________________________________________________________________
+---
 
 ```Python
 Price1= 3000.14159
@@ -360,7 +359,7 @@ Each thousand brake is seperated with a comma
   * price 3 is  1,200.34
 
 You can use them combined too:  print({price1:+, .2f}) -> +3,000.14
-____________________________________________________________________________________________________
+---
 
 
   
