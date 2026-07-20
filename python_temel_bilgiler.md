@@ -359,9 +359,63 @@ Each thousand brake is seperated with a comma
   * price 3 is  1,200.34
 
 You can use them combined too:  print({price1:+, .2f}) -> +3,000.14
+
 ---
 
+### WHILE LOOP
+```Python
+while kosul :
+    #codes here are continously executed while kosul is true
 
-  
+#codes here are executed when kosul is false
 
+age=int(input("Enter your age: "))
+while age < 0 :
+    print ("Your age cannat be negative")
+    age= int(input("Enter your age: "))
+
+print(f"You are {age} years old")
+```
+---
+
+### FOR LOOPS
+
+For loops tend to be better when you have to do something for only a fixed amount of time.
+You can iterate over a range, a str,ng , sequance etc
+Make sure the code is intended
+
+---
+1'den ona kadar olan sayıları alt alta yazmak için range(start,finish,step) fonkisyonunu şu şekilde kullanabiliriz:
+```Python
+for counter in range (1,11): # 1 dahil, 11 dah,l değil
+    print(counter)
+```
+---
+10'dan geriye saymak için reversed() ve range() fonksiyonlarını beraber kullanabiliriz:
+```Python
+for x in reversed(range(1,11)):
+    print(x)
+```
+---
+1 den başlayıp 2 şer 2 şer saymak için:
+```Python
+for x in rande(1,11,2):
+    print(x)
+```
+Bir stringdeki her karakteri teker teker yazdırmak istersek:
+```Python
+credit_card=1234-5678-9012-3456
+for x in credit_card: 
+    print(x)
+```
+---
+PRACTICAL EXAMPLE:
+If x is equal to thirteen we will continue and skip over the iteration, else we will print whatever our counter is(print everything execpt 13) 
+```Python
+for x in range(1,21):
+    if x ==13:
+        continue
+    else:
+        print(x)
+```
 
