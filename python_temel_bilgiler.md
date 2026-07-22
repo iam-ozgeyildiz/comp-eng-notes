@@ -418,4 +418,71 @@ for x in range(1,21):
     else:
         print(x)
 ```
+Countdow timer
+İmport time
+my_time=int(input(Enter the time i seconds: “))
+for x in range(0,my_time)
+    print(x)
+    time.sleep(1)
+
+print(“TIME’S UP”)
+NESTED LOOPS ( İÇ İÇE DÖNGÜLER )
+outer loop:
+    inner loop:
+I haven’t really noted anything cuz its same as java except the syntax
+
+print(x,end="") we use this so it doesnt skip to the next line when the string ends, normally its automatically ends with”\n”
+
+ sys.exit() python programı tamamen kapatan kod
+LISTS SETS AND TUPLES
+A collection is a single “variable” used to store multiple variables
+List = [] ordered and changeable,duplicates ok
+Set= {} unordered and immutable, but Add/Remove OK, no duplicates
+Tuple = () ordered and unchangeable, duplicates ok, faster
+By duplicates, it means its okay to have elements of the same value, like having multiple 1’s and2’s or having multiple “John” s and so on
+LIST
+fruits= [“apple”, “orange”,”banana”, “coconut”]
+print(fruits[1]) orange, index starts from 0
+with the index operator, you can have a start, end and a step
+print(fruits[0:3]  [‘apple’ , ‘orange’, ‘banana’] #includes the beginning index, does not include the ending index(3) you can also write:  print(fruits [:3])
+print(fruits[::2) every second element beggining from index zero so apple and banana
+if step is negative 1 its gonna be printed starting from the last index
+
+<img width="184" height="48" alt="image" src="https://github.com/user-attachments/assets/62b2aa5e-570e-447b-938f-72025650c901" />
+
+dir() function lists all the different methods that are available to a collection.dir(fruits)
+dir method also lists attributes etc.
+For the description of the said methods, you can just use the help() function. Help(fruits)
+Len(fruits) pretty self explanotary
+We can find if a value is within a collection with the in method
+Print(“apple” in fruits)  True
+Fruits[0]= “pineapple” now theres no apple but a pineapple instead
+So its pineapple,orange,banana,coconut now.
+
+Fruits.append(“watermelon”) adds whats inside the brackets to the end off the list
+Pineapple,orange,banana,coconut,watermelon
+Fruits.remove(“orange”) now theres no orange.
+Pineapple,banana,coconut,watermelon
+Fruits.insert(0,pear), we inserted pear to the 0 th index, now we have
+Pear,pineapple,banana,coconut,watermelon
+Fruits.sort() -> puts everything in alphebetical order.
+Fruits.reverse() -> prints everything in reversed order
+Fruits.clear()->clears all of the elements, an empty list now.
+Fruits.index(coconut) ->returns the index of a value
+Fruits.count(“banana”) counts how many bananas are there
+
+SETS
+Fruits_set= {“apple”, “orange”,”banana”, “coconut”}
+print(fruits_set)everytime it prints, it will print with different order since its unordered
+you can use dir(), help(), len() and in functions with sets too
+you cant use idexing with a set because its unordered, if you say print(fruits_set[2]) its gonna give an error.
+Fruits_set.remove(“apple”)
+Fruits_set.pop() will remove whatever elements is random nd its gonna be random
+You can use clear() method.
+TUPLES
+Puts them in order automatically
+We only have count and index methods, and in operator
+
+
+Next is shopping cart program and then 2d collections. Lists are pretty similar to arrays in java but i wonder if they work with the same princible as well?,Does python create objects in the background too or nah?It probably does im just too inexperienced in python as of now. Anyways sleeping now its too latee gonna fix the notes later 
 
